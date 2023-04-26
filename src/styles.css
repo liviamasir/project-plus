@@ -1,0 +1,10 @@
+.container {
+  font-family: "Inconsolata", monospace;
+}
+.bratislava {
+  font-size: 25px;
+}
+.button {
+  color: turquoise;
+  border-radius: 4px;
+}
