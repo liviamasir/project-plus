@@ -1,7 +1,8 @@
 .container {
   font-family: "Inconsolata", monospace;
   width: 300px;
-  margin: 30 auto;
+  margin: 0 auto;
+  padding-top: 30px;
 }
 .bratislava {
   font-size: 25px;
@@ -9,4 +10,9 @@
 .button {
   color: turquoise;
   border-radius: 4px;
+}
+
+.card-style {
+  max-width: 650px;
+  margin: 0 auto;
 }
