@@ -41,10 +41,15 @@ cityForm.addEventListener("submit", showCity);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
+  console.log(response.data);
   console.log(temperature);
   let currentTemp = document.querySelector("#temperature");
   let description = response.data.weather[0].main;
   currentTemp.innerHTML = `${description}   ${temperature}°`;
+  let humidityElement = document.querySelector("#humidity");
+  humidityElement.innerHTML = response.data.main.humidity;
+  let windElement = document.querySelector("#wind");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function handlePosition(position) {

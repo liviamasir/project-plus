@@ -1,6 +1,7 @@
 .container {
   font-family: "Inconsolata", monospace;
   width: 300px;
+  margin: 30 auto;
 }
 .bratislava {
   font-size: 25px;
