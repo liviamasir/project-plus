@@ -36,25 +36,23 @@ function showCity(event) {
     .catch((error) => console.log(error));
 }
 
-let cityForm = document.querySelector("#search-form");
-cityForm.addEventListener("submit", showCity);
-
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let currentTemp = document.querySelector("#temperature");
-  let description = response.data.weather[0].main;
+  let currentDescription = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity");
   let windElement = document.querySelector("#wind");
   let iconElement = document.querySelector("#icon");
 
-  currentTemp.innerHTML = `${description}   ${temperature}°`;
+  currentTemp.innerHTML = temperature;
+  currentDescription.innerHTML = response.data.weather[0].main;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
-  iconElement.setAttribute("alt", response.weather[0].description);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function handlePosition(position) {
@@ -68,6 +66,10 @@ function handlePosition(position) {
     .then(showTemperature)
     .catch((error) => console.log(error));
 }
+
+let cityForm = document.querySelector("#search-form");
+cityForm.addEventListener("submit", showCity);
+
 navigator.geolocation.getCurrentPosition(handlePosition, (error) =>
   console.log(error)
 );
