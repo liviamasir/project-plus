@@ -41,15 +41,20 @@ cityForm.addEventListener("submit", showCity);
 
 function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
-  console.log(response.data);
-  console.log(temperature);
   let currentTemp = document.querySelector("#temperature");
   let description = response.data.weather[0].main;
-  currentTemp.innerHTML = `${description}   ${temperature}°`;
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = response.data.main.humidity;
   let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+
+  currentTemp.innerHTML = `${description}   ${temperature}°`;
+  humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.weather[0].description);
 }
 
 function handlePosition(position) {
