@@ -20,3 +20,13 @@
   max-width: 650px;
   margin: 0 auto;
 }
+
+.active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.active:hover {
+  text-decoration: none;
+}
