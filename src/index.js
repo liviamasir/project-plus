@@ -85,10 +85,38 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   celsiusLink.classList.add("active");
 }
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+         ${day}
+        <br />
+        <img
+          src="http://openweathermap.org/img/wn/02d@2x.png"
+          alt="Clear"
+      class="weather-forecast-image"
+    />
+    <br />
+    <span class="maximum">15°</span>
+    <span class="minimum">5°</span>
+    </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
 
 let cityForm = document.querySelector("#search-form");
 cityForm.addEventListener("submit", showCity);
+
+displayForecast();
 
 navigator.geolocation.getCurrentPosition(handlePosition, (error) =>
   console.log(error)
