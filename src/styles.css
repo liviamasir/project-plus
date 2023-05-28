@@ -11,6 +11,17 @@
 .bratislava {
   font-size: 25px;
 }
+
+.weather-forecast {
+  text-align: center;
+}
+.weather-forecast-image {
+  width: 35px;
+}
+
+.minimum {
+  opacity: 0.6;
+}
 .button {
   color: turquoise;
   border-radius: 4px;
