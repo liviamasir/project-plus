@@ -1,13 +1,16 @@
 .container {
   font-family: "Inconsolata", monospace;
-  width: 300px;
+  max-width: 750px;
   margin: 0 auto;
   padding-top: 30px;
 }
 .upper-container {
   margin: 0 auto;
 }
-
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
 .bratislava {
   font-size: 25px;
 }
@@ -16,7 +19,7 @@
   text-align: center;
 }
 .weather-forecast-image {
-  width: 35px;
+  width: 40px;
 }
 
 .minimum {
@@ -24,12 +27,18 @@
 }
 .button {
   color: turquoise;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 .card-style {
-  max-width: 650px;
+  display: block;
+  max-width: 750px;
   margin: 0 auto;
+}
+
+.card-body {
+  margin: 0 auto;
+  background-color: #e1eedd;
 }
 
 .active {

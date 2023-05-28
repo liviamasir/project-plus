@@ -29,48 +29,54 @@
   <body>
     <div class="upper-container">
       <div class="container">
-        <div class="card card-style">
-          <div class="card-body">
-            <div class="row">
-              <div class="col">London</div>
-              <div class="col">Paris</div>
-              <div class="col">Bratislava</div>
-              <br />
-              <br />
-              <form id="search-form">
-                <input
-                  type="text"
-                  id="search-input"
-                  placeholder="Type the city here"
-                />
-                <button type="submit button" id="search-button">Search</button>
-              </form>
-              <br />
-              <br />
-            </div>
-            <div class="row">
-              <div class="col-6 bratislava" id="current-city">Bratislava</div>
+        <div class="wrapper">
+          <div class="card card-style">
+            <div class="card-body">
               <div class="row">
-                <div class="col-6" id="description">Clear</div>
+                <div class="col">London</div>
+                <div class="col">Paris</div>
+                <div class="col">Bratislava</div>
+                <br />
+                <br />
+                <form id="search-form">
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Type the city here"
+                  />
+                  <button type="submit button" id="search-button">
+                    Search
+                  </button>
+                </form>
+                <br />
+                <br />
               </div>
-
               <div class="row">
-                <div class="col-6">
-                  <strong id="temperature">14</strong
-                  ><span class="units">°C</span>
+                <div class="col-6 bratislava" id="current-city">Bratislava</div>
+                <div class="row">
+                  <div class="col-6" id="description">Clear</div>
                 </div>
 
-                <div class="col-6">Humidity: <span id="humidity"></span> %</div>
+                <div class="row">
+                  <div class="col-6">
+                    <strong id="temperature">14</strong
+                    ><span class="units">°C</span>
+                  </div>
 
-                <div class="col-6" id="currentDate"></div>
-                <div class="col-6">Wind: <span id="wind"></span> km/h</div>
-                <div class="col-6">
-                  <img
-                    src="http://openweathermap.org/img/wn/01d@2x.png"
-                    alt="Clear"
-                    class="float-left"
-                    id="icon"
-                  />
+                  <div class="col-6">
+                    Humidity: <span id="humidity"></span> %
+                  </div>
+
+                  <div class="col-6" id="currentDate"></div>
+                  <div class="col-6">Wind: <span id="wind"></span> km/h</div>
+                  <div class="col-6">
+                    <img
+                      src="http://openweathermap.org/img/wn/01d@2x.png"
+                      alt="Clear"
+                      class="float-left"
+                      id="icon"
+                    />
+                  </div>
                 </div>
                 <br />
                 <br />
@@ -79,14 +85,15 @@
               </div>
             </div>
           </div>
+
+          <span
+            ><a href="https://github.com/liviamasir/project-plus">
+              Open-source code
+            </a>
+            by Livia Masir</span
+          >
         </div>
       </div>
-      <span
-        ><a href="https://github.com/liviamasir/project-plus">
-          Open-source code
-        </a>
-        by Livia Masir</span
-      >
     </div>
     <script src="src/index.js"></script>
   </body>
